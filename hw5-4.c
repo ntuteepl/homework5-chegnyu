@@ -10,7 +10,7 @@ int main() {
     }
     ha = (h % 12) * 30 + 0.5 * m;
     ma = m * 6;
-    a = fabs(ha - ma);
+    a = (ha - ma);
     if (a > 180) {
         a = 360 - a;
     }
