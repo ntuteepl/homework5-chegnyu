@@ -18,7 +18,7 @@ int main() {
         angle = 360 - angle;
     }
 
-    printf("%0.1f", angle);
+    printf("%0.3f", angle);
 
     return 0;
 }
