@@ -2,24 +2,19 @@
 #include <math.h>
 
 int main() {
-    int hours, minutes;
-    double hourAngle, minuteAngle, angle;
-
-    scanf("%d%d", &hours, &minutes);
-
-    if (hours < 1 || hours > 12 || minutes < 0 || minutes > 59) {
-
+    int h, m;
+    double ha, ma, a;
+    scanf("%d%d", &h, &m);
+    if (h < 1 || h > 12 || m < 0 || m > 59) {
         return 1;
     }
-    hourAngle = (hours % 12) * 30 + 0.5 * minutes;
-    minuteAngle = minutes * 6;
-    angle = fabs(hourAngle - minuteAngle);
-    if (angle > 180) {
-        angle = 360 - angle;
+    ha = (h % 12) * 30 + 0.5 * m;
+    ma = m * 6;
+    a = fabs(ha - ma);
+    if (a > 180) {
+        a = 360 - a;
     }
-
-    printf("%0.3f", angle);
+    printf("%0.3f", a);
 
     return 0;
 }
-
