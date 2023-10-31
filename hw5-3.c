@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
-{
-   int w,t;
-   double s;
-   scanf("%d%d",&w,&t);
-   if(w<=60){
-    s = w*t;
-   }
-   else if(w<=120){
-    s = w*1.33*t;
-   }
-   else {
-    s = w*1.66*t;
-   }
-   printf("%0.1f",s);
+int main() {
+    int w,r;
+    double s;
+    scanf("%d%d", &w,&r);
+    if (w <= 60) {
+        s = w * r;
+    }
+    else if (w <= 120) {
+        s = 60 * r + (w - 60) * r * 1.33;
+    }
+    else {
+        s = 60 * r + 60 * r * 1.33 + (w - 120) * r * 1.66;
+    }
+
+    printf("%0.1f ", s);
+
 }
-
